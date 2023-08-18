@@ -1,0 +1,141 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: none;
+  text-align: center;
+  margin: 10px;
+  .close-toggle {
+    display: hidden;
+  }
+}
+.navbar {
+  @include flex-between();
+  .nav-home {
+    .home {
+      @include flex-center();
+      p {
+        font-size: var(text-sm);
+        color: var(--gray-dark-color);
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .options {
+    @include flex-center();
+    .share {
+      @include flex-center();
+      p {
+        color: var(--gray-dark-color);
+        font-size: var(--text-sm);
+      }
+      img {
+        margin-left: 6px;
+      }
+    }
+    .mail {
+      @include flex-center();
+      p {
+        color: var(--gray-dark-color);
+        font-size: var(--text-sm);
+        margin-left: 26px;
+      }
+      img {
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+// ========================Responsive====================
+@media screen and (max-width: 1880px) {
+  .navbar {
+    .nav-home {
+      .home {
+        p {
+          font-size: var(--text-xs);
+        }
+      }
+    }
+
+    .options {
+      .share {
+        p {
+          font-size: var(--text-xs);
+        }
+      }
+      .mail {
+        p {
+          font-size: var(--text-xs);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1225px) {
+  .nav-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    .close-toggle {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar {
+    .nav-home {
+      .home {
+        p {
+          font-size: var(--text-2xs);
+        }
+      }
+    }
+
+    .options {
+      .share {
+        p {
+          font-size: var(--text-2xs);
+        }
+      }
+      .mail {
+        p {
+          font-size: var(--text-2xs);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .navbar {
+    .nav-home {
+      .home {
+        p {
+          font-size: var(--text-3xs);
+        }
+      }
+    }
+
+    .options {
+      .share {
+        p {
+          font-size: var(--text-3xs);
+        }
+      }
+      .mail {
+        p {
+          font-size: var(--text-3xs);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+include ./views/mixins
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='icon' type='image/x-icon' href='/images/logo.svg')
+    title Sales Score
+    link(rel='stylesheet' href='./css/styles.css')
+  body
+    .container
+      .page-content
+        // ==============SIDEBAR-START================================
+        .left-sidebar
+          .sidebar__header#sideHeader
+            .logo
+              img(src='./images/logo-text.svg' width='163px' height='54px' alt='')
+            button サポートサイト
+          ul.sidebar__list#sideMenu
+            include views/menuItems
+        // ==============SIDEBAR-END================================
+        // ==============NAVBAR-START================================
+        .main
+          .main__content
+              
+            .nav-logo
+              img.close-toggle#closeMenu(src="./images/icons/close-icon.svg", width='20px' height='20px' alt="")
+              img.bars-toggle#toggleMenu(src="./images/icons/bars-icon.svg", width='20px' height='20px' alt="")
+              a(href="#")
+                img(src='./images/logo-text.svg' width='163px' height='54px' alt='')
+            .navbar
+              .nav-home
+                
+                a.home(href='#')
+                  img(src="./images/icons/home-icon.svg" width='18px' height='16px')
+                  p トップ
+              
+              .options
+                a.share(href='#')
+                  p ログイン
+                  img(src="./images/icons/share-icon.svg" width='14px' height='14px')
+                a.mail(href='#')
+                  p お問い合わせ
+                  img(src="./images/icons/mail-icon.svg" width='20px' height='15px')
+             
+            // ==============NAVBAR-END===========================
+            // ==============SEARCH-START========================
+    
+            .search   
+              p どんな事でお困りですか？ 
+              .search-bar  
+                input.input-search(type="text" placeholder="キーワードを入力")
+                img(src="./images/icons/search-icon.svg", alt="")
+              .btn-search
+                button 検索
+              // ==============SEARCH-END================================
+              // ==============FIRST-SECTION-START=========================
+            .first-section
+              .section__title
+                +sectionTitle("/images/section1/section1-title.svg","190px","149px","利用シーン別ガイド","SALES SCOREを様々なシーンでご活用いただく方法をご紹介します。") 
+              .section__list1
+                include views/sectionList1
+              // ==============FIRST-SECTION-END=========================
+              //- ==============SECOND-SECTION-START================
+              .second-section 
+                .section__title
+                  +sectionTitle("/images/section2/section2-title.svg","122px","137px","検査結果画面の解説","SALES SCOREのアウトプット項目について紹介します。") 
+                .section__content
+                  h6.section__list2-title 適性検査のアウトプット
+                  .section__list2
+                    include ./views/sectionList2-1
+                .section__content
+                  h6.section__list2-title 企業傾向分析
+                  .section__list2
+                    include ./views/sectionList2-2
+                .section__content
+                  h6.section__list2-title 検査結果詳細
+                  .section__list2
+                    include ./views/sectionList2-3
+              //- ==============SECOND-SECTION-END================
+              //- ==============THIRD-SECTION-START================
+              .third-section
+                .section__title
+                  +sectionTitle("./images/section3/section2-title.svg","125px","117px","主な機能", "SALES SCOREの利用方法及び、ツールに表示される項目について紹介します。")
+                .section__content
+                  include ./views/sectionList3
+              //- ==============THIRD-SECTION-END================
+              //- ==============FOOTER-START================
+    .footer        
+      p Copyright © 2022 SALES SCORE All Right Reserved. .
+              //- ==============FOOTER-END================
+    script(src='./scripts/main.js')

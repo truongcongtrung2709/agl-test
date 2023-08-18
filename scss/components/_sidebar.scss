@@ -1,0 +1,88 @@
+// ==================Sidebar====================
+.left-sidebar {
+  width: 18%;
+  .sidebar__header {
+    text-align: center;
+    border-top: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    border-right: 2px solid var(--secondary-color);
+    .logo {
+      padding: 32px 31px 0 26px;
+    }
+    button {
+      width: 176px;
+      height: 43px;
+      margin: 18px 23px 27px 20px;
+      padding: 8px 6px 14px 8px;
+    }
+  }
+  .sidebar__list {
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    border-right: 2px solid var(--secondary-color);
+    .menu-item {
+      border-top: 1px solid var(--secondary-color);
+      padding: 25px 0 21px 19px;
+      align-items: center;
+      font-size: var(--text-md);
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          margin-right: 22px;
+        }
+      }
+    }
+  }
+}
+// =====================REPONSIVE========================
+@media screen and (max-width: 1880px) {
+  .left-sidebar {
+    width: 25%;
+    .sidebar__header {
+      .logo {
+        img {
+          width: 120px;
+        }
+      }
+      button {
+        font-size: var(--text-sm);
+        width: 150px;
+      }
+    }
+    .sidebar__list {
+      .menu-item {
+        font-size: var(--text-sm);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .left-sidebar {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1225px) {
+  .left-sidebar {
+    display: none;
+    width: auto;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    top: 70px;
+    left: 0;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
+    .sidebar__list {
+      .menu-item {
+        a {
+          img {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

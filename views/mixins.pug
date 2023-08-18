@@ -1,0 +1,24 @@
+//- ======================Menu-Item =======================
+mixin menuItem(title)
+  li.menu-item
+    a(href='#')
+      span= title 
+      img(src='/images/icons/arrow.svg' width='9px' height='14px' alt='')
+//- ======================Section-Title =======================
+mixin sectionTitle(img,width, height, title, desc)
+  img(src=img width=width height=height)
+  .section-info
+    h1= title
+    h3= desc
+//- =====================First-Section=====================
+mixin sectionList(img, desc, width, height)
+    a.sectionList1-item.sectionList2-item(href='#')
+      img(src=img, width=width, height=height)
+      p= desc
+//- //=========================Third-Section========================
+mixin sectionList3(title, arrayOfDesc)
+  .section__item
+    h6.section__item-title=title
+    each desc in arrayOfDesc
+      li.item-list3
+        a(href='#')="・"+desc

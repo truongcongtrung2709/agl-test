@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white-color: #ffffff;
+  --gray-dark-color: #7b7b7b;
+  --gray-light-color: #e1e8ef;
+  --text-color: #333333;
+  --primary-color: #42a7c2;
+  --secondary-color: #eaf1f7;
+
+  --text-2xl: 26px;
+  --text-xl: 20px;
+  --text-lg: 18px;
+  --text-md: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-2xs: 10px;
+  --text-3xs: 8px;
+}
+
+body {
+  position: relative;
+  background-color: var(--white-color);
+  font-family: "Noto Sans JP", sans-serif;
+}
+h1 {
+  color: var(--primary-color);
+  font-weight: normal;
+  font-size: var(--text-2xl);
+}
+h3 {
+  font-weight: normal;
+  font-size: var(--text-md);
+  color: var(--text-color);
+}
+h6 {
+  font-weight: normal;
+  font-size: var(--text-xl);
+  color: var(--primary-color);
+}
+button {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--text-lg);
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
+  }
+  &:active {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+.container {
+  width: 62.5%;
+  margin: 0 auto;
+  .page-content {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    .main {
+      width: 82%;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+  }
+}
+//======================Responsive=======================
+@media screen and (max-width: 1880px) {
+  .container {
+    .page-content {
+      .main {
+        width: 75%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container {
+    .page-content {
+      .main {
+        width: 70%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1225px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    .page-content {
+      .main {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: var(--text-lg);
+  }
+  h3 {
+    font-size: var(--text-md);
+  }
+}
