@@ -9,15 +9,15 @@ Getting Started
   Prerequisites:
     . npm:
 
-      npm i npm@lastest -g
+       npm i npm@lastest -g
 
     . pug:
     
-      npm -g install pug
+       npm -g install pug
 
     . SASS:
 
-      npm install -g sass
+       npm install -g sass
 
   Installing
   
@@ -35,7 +35,7 @@ Getting Started
     
         . npm install -g sass
         
-        Compile styles.scss with styles.css:
+       Compile styles.scss with styles.css:
         
         . sass ./scss/styles.scss ./css/styles.css --watch
 
